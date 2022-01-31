@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-image: linear-gradient(to bottom left, #A541FF, #40BBFE);
+    overflow-x: hidden;
+}
+/* ----------over arching css------------- */
+.page{
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+.box{
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
+    border-radius: 20px;
+    backdrop-filter: blur(1rem);
+    z-index: 2;
+    color: white;
+    padding: 50px;
+    text-overflow: wrap;
+}
+.btn{
+    font-family: 'Rubik', sans-serif;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+/* -----x----over arching css-------x----- */
+
+/* --------------login page------------- */
+.login-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-ready{
+    margin-bottom: 20px;
+}
+/* -------x------login page------x------ */
+
+
+
+.hide{
+    display: none;
+}
