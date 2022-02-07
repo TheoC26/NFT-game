@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&family=Shrikhand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <title>Game</title>
@@ -18,15 +18,108 @@
     <div class="background"></div>
     <!-- ----------------login----------------- -->
     <div class="login-page page">
-      <div class="box main-login">
-        <h1 class="login-ready">ready to race?</h1>
-        <button id="btn-login" class="btn">Moralis Metamask Login</button>
-      </div>
+      <center>
+        <div class="box main-login">
+          <h1 class="login-ready">ready to race?</h1>
+          <button id="btn-login" class="btn">Moralis Metamask Login</button>
+        </div>
+      </center>
     </div>
     <!-- --------x-------login--------x-------- -->
-    <div class="main-page page hide">
-      <button id="btn-logout" class="btn">Logout</button>
+
+    <!-- --------------------user----------------- -->
+    <div class="user-page page hide">
+      <div class="top-bar">
+        <div id="btn-logout" class="btn">Logout</div>
+        <div class="currency-user">
+          <div class="btn">cc: 326</div>
+          <div class="btn">energy: 326</div>
+          <div class="btn">User: Theo</div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="left box">
+          <div class="name">Theo</div>
+          <div class="wallet-id">
+            0x824872BFb8c67D2045504faaa5962cd2825a0bEb
+          </div>
+          <div class="number">2 ccicks</div>
+        </div>
+        <div class="right box">
+          <div class="progress-bar">
+            <div class="text">chest open time</div>
+            <div class="bar"></div>
+            <div class="progress"></div>
+          </div>
+          <div class="progress-bar">
+            <div class="text">gold amount</div>
+            <div class="bar"></div>
+            <div class="progress"></div>
+          </div>
+          <div class="progress-bar">
+            <div class="text">chest slots</div>
+            <div class="bar"></div>
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="btn ccicks">ccicks</div>
+        <div class="btn upgrade">upgrade</div>
+        <div class="btn shop">shop</div>
+      </div>
+
+        <div class="body body-ccicks box">
+          <div class="box shoe-box">
+            <img
+              src="./ShoesIdeasCrazyCicks.png"
+              alt="shoe"
+              style="width: 100%"
+            />
+            <div class="progress-bar-small">
+              <div class="text">speed</div>
+              <div class="bar"></div>
+              <div class="progress"></div>
+            </div>
+            <div class="progress-bar-small">
+              <div class="text">stamina</div>
+              <div class="bar"></div>
+              <div class="progress"></div>
+            </div>
+            <div class="progress-bar-small">
+              <div class="text">skill</div>
+              <div class="bar"></div>
+              <div class="progress"></div>
+            </div>
+          </div>
+          <div class="box shoe-box">
+            <img
+              src="./ShoesIdeasCrazyCicks.png"
+              alt="shoe"
+              style="width: 100%"
+            />
+            <div class="progress-bar-small">
+              <div class="text">speed</div>
+              <div class="bar"></div>
+              <div class="progress"></div>
+            </div>
+            <div class="progress-bar-small">
+              <div class="text">stamina</div>
+              <div class="bar"></div>
+              <div class="progress"></div>
+            </div>
+            <div class="progress-bar-small">
+              <div class="text">skill</div>
+              <div class="bar"></div>
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+
     </div>
+    <!-- ---------x----------user----------x------ -->
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>

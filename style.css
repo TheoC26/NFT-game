@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Comfortaa', cursive;
     color: white;
 }
 .background{
@@ -19,7 +19,9 @@ body{
 .page{
     width: 100vw;
     min-height: 100vh;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    padding: 30px;
+    overflow-x: hidden;
 }
 .box{
     background: linear-gradient(to bottom left, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
@@ -31,7 +33,7 @@ body{
     text-overflow: wrap;
 }
 .btn{
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Comfortaa', cursive;
     background: rgba(255, 255, 255, 0.3);
     border: none;
     padding: 10px;
@@ -45,6 +47,105 @@ body{
     background: rgba(255, 255, 255, 0.5);
 }
 /* -----x----over arching css-------x----- */
+/* -------------all pages------------ */
+.hero{
+    display: flex;
+    grid-gap: 60px;
+    padding: 0 60px;
+    margin: 60px;
+}
+.hero .left{
+    min-height: 350px;
+    width: 30vw;
+    border-radius: 60px;
+    min-width: 200px;
+}
+.hero .right{
+    min-height: 350px;
+    width: 45vw;
+    border-radius: 60px;
+    min-width: 400px;
+}
+.progress-bar .text{
+    font-size: 35px;
+}
+.progress-bar .bar{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
+}
+.progress-bar .progress{
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    background: white;
+    transform: translateY(-30px);
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.nav .btn{
+    padding: 30px;
+    border-radius: 100px;
+}
+.body{
+    width: 80vw;
+    height: 1000px;
+    border-radius: 60px;
+    display: flex;
+    padding: 60px;
+    margin: auto;
+}
+.body .box{
+    background: rgba(255, 255, 255, .1);
+    width: 40%;
+    margin: 3vw;
+    /* height: 35vw; */
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.body .box:hover{
+    background: rgba(255, 255, 255, .3);
+}
+.top-bar{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.top-bar .currency-user{
+    display: flex;
+}
+.currency-user .btn{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.progress-bar-small{
+    display: block;
+    justify-content: left;
+}
+.progress-bar-small .text{
+    font-size: 15px;
+}
+.progress-bar-small .bar{
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
+}
+.progress-bar-small .progress{
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    background: white;
+    transform: translateY(-20px);
+}
 
 /* --------------login page------------- */
 .login-page{
@@ -55,8 +156,30 @@ body{
 .login-ready{
     margin-bottom: 20px;
 }
+#btn-logout{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
 /* -------x------login page------x------ */
 
+/* --------------user page------------- */
+
+
+.left .name{
+    font-size: 60px;
+    margin-top: 30px;
+}
+.left .wallet-id{
+    font-size: 10px;
+}
+.left .number{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+/* -------x------user page-------x----- */
 
 
 .hide{

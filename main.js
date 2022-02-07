@@ -1,29 +1,53 @@
-// -------------page switcher---------------
-var login;
-var main;
+//------------- overall variables-----------
+//pages
+const loginPage = document.querySelector(".login-page");
+const userPage = document.querySelector(".user-page");
+const pages = [loginPage, userPage];
+var currentPage = 1;
+//-------x----- overall variables----x------
 
+// -------------page switching---------------
 
-
-
+function switchPage(target_page) {
+  for (let i = 0; i < pages.length; i++) {
+    const page = pages[i];
+    page.classList.add("hide");
+  }
+  target_page.classList.remove("hide");
+}
+function pageHandler() {
+  if (!user.isCurrent()) {
+    switchPage(loginPage);
+  } else {
+    switchPage(pages[currentPage]);
+  }
+}
+// ------x------page switching-------x-------
+// ---------x------- LOG IN ----------x--------
 /* Moralis init code */
 const atributes = document.querySelector(".atributes");
-const loginPage = document.querySelector(".login-page");
-const mainPage = document.querySelector(".main-page");
 const serverUrl = "https://4s4l0zjmvpvz.usemoralis.com:2053/server";
 const appId = "h0V0uZQJzQVrh6ZLpO7DAtPUJL78mBqobKf9nZVZ";
 Moralis.start({ serverUrl, appId });
+let user = Moralis.User.current();
 
 /* Authentication code */
 async function login() {
   let user = Moralis.User.current();
   if (!user) {
-    user = await Moralis.authenticate({ signingMessage: "Log in using Moralis" })
+    user = await Moralis.authenticate({
+      signingMessage: "Log in using Moralis",
+    })
       .then(function (user) {
-        console.log("logged in user:", user);
-        console.log(user.get("ethAddress"));
-        loginPage.classList.add("hide");
-        mainPage.classList.remove("hide");
-        getNFTs();
+        switchPage(userPage);
+        const options = {
+          chain: "eth",
+          address: "0x1e30eeebfeab70f9f88761d98edfe708ea27e95c",
+        };
+        const nfts = Moralis.Web3API.account.getNFTs(options);
+        console.log(nfts);
+        console.log(nfts.PromiseResult);
+        
       })
       .catch(function (error) {
         console.log(error);
@@ -34,24 +58,15 @@ async function login() {
 async function logOut() {
   await Moralis.User.logOut();
   console.log("logged out");
-  loginPage.classList.remove("hide");
-  mainPage.classList.add("hide");
-}
-
-async function getNFTs(){
-    const options = {
-      chain: "eth",
-      address: "0xb5e6acc6cbb5d712a96fcc7a8fe25a69f10ecf4c",
-    };
-    const EthNFTs = await Moralis.Web3API.account.getNFTs(options);
-
-    console.log(EthNFTs.result[10].metadata);
-    atributes.innerHTML = EthNFTs.result[10].metadata;
+  console.log(user);
+  switchPage(loginPage);
 }
 
 document.getElementById("btn-login").onclick = login;
 document.getElementById("btn-logout").onclick = logOut;
 // ---------x------- LOG IN ----------x--------
 
-
 // -----------------
+setInterval(pageHandler, 50);
+
+moralis
